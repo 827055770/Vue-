@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<title>商家修改</title>
+	<link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+	<button class="btn btn-info">商家修改</button>
+	<hr>
+	<form action="/doshoplistedit" method="post" enctype="multipart/form-data">
+		<div class="form-group">
+			<label>商家名</label>
+			<input type="text" class="form-control" name="name" value="<%=data.name%>">
+        </div>
+        <div class="form-group">
+			<label>图片</label>
+			<img src="<%=data.pic%>" alt="" width="100px" height="100px">
+		</div>
+		<div class="form-group">
+			<label>上传新图片</label>
+			<input type="file" class="form-control" name="pic">
+        </div>
+        <div class="form-group">
+			<label>描述</label>
+			<input type="text" class="form-control" name="content" value="<%=data.content%>">
+        </div>
+        <div class="form-group">
+			<label>配送费</label>
+			<input type="text" class="form-control" name="fee" value="<%=data.fee%>">
+        </div>
+        <input type="hidden" value="<%=data.id%>" name="id">
+		<input type="submit" value="修改" class="btn btn-success">
+	</form>
+</body>
+</html>

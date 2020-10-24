@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <form class="form-horizontal" action="/shopgoodcreate" method="POST" enctype="multipart/form-data" > 
+    <div class="form-group">
+    <label class="col-sm-2 control-label">名字:</label>
+    <div class="col-sm-10">
+     <input class="form-control"  type="text" name="foodname" >
+    </div>
+    </div>
+    图片: <input class="form-control" type="file" name="foodpic">
+    描述: <input class="form-control" type="text" name="descr">
+    金额: <input class="form-control" type="text" name="price">
+    <input type="hidden" name="shoplist_id" value="<%=shoplist_id%>">
+    <input type="submit" class="btn btn-primary" value="添加">
+  </form>
+</body>
+</html>
